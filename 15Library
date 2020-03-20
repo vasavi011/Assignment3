@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Library {
+
+	public static void main(String[] args)
+	{
+	Scanner sc = new Scanner(System.in);//taking input from user using scanner class
+	System.out.println("Enter Number Of Days");
+	int days = sc.nextInt();
+	if(days<=5)
+		System.out.println("Fine is 50 paise");
+else    if(days>5&&days<=10)
+	System.out.println("Fine is 1 rupee");
+    else if(days>10&&days<=30)
+    	System.out.println("Fine is 5 rupee");
+else    if(days>30)
+	System.out.println("Membership cancelled");
+
+	}
+
+}
