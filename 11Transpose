@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Transpose
+{
+    public static void main(String args[]) //main method 
+    {
+	int i, j;
+	System.out.println("Enter total rows and columns: ");
+	Scanner s = new Scanner(System.in);
+	//taking input from the user
+	int row = s.nextInt();
+	int column = s.nextInt();
+	int array[][] = new int[row][column];
+	System.out.println("Enter matrix:");
+ 	for(i = 0; i < row; i++)
+  	{
+   	    for(j = 0; j < column; j++) 
+     	    {
+        	array[i][j] = s.nextInt();
+        	System.out.print(" ");
+            }//end of inner for loop
+  	}//end of outer for loop
+	System.out.println("The above matrix before Transpose is ");
+  	for(i = 0; i < row; i++)
+  		//logic for before transpose
+    	{
+      	    for(j = 0; j < column; j++)
+            {
+          	System.out.print(array[i][j]+" ");
+            }//end of inner for loop
+            System.out.println(" ");
+        }//end of outer for loop
+ 	System.out.println("The above matrix after Transpose is ");
+  	for(i = 0; i < column; i++)//logic for transpose
+    	{
+      	    for(j = 0; j < row; j++)
+            {
+                System.out.print(array[j][i]+" ");
+            }//end of inner for loop
+            System.out.println(" ");
+        }//end of outer for loop
+    }//end of main method
+}//end of class
