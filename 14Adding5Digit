@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Adding5Digit 
+{
+	public static void main(String[] args)
+	{
+	long r,temp,sum=0,i,temp_sum=0;
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter a 5 digit Number");
+	int num = sc.nextInt();
+	System.out.println("The number after adding one digit to each");
+	while(num!=0)
+	{//logic to get each digit
+		r=num%10;
+		temp=r+1;
+		if(temp==10)
+		temp=0;
+		num=num/10;
+		sum=(sum*10)+temp;
+	}
+		while(sum!=0)
+	{//logic to add each digit to number
+		i=sum%10;
+		sum=sum/10;
+		temp_sum=(temp_sum*10)+i;
+	}
+	System.out.println(temp_sum);
+
+	}
+}
