@@ -1,0 +1,16 @@
+
+import java.util.Scanner;
+public class Cashier
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);//taking input from user using scanner
+		System.out.println("Please Enter amount");
+		int Amount = sc.nextInt();
+		System.out.println( "100 *" + Amount / 100);// toget 100's
+		System.out.println( "50 *" +(Amount % 100) / 50);//to get 50's
+		System.out.println("10 * " +(((Amount % 100) % 50) / 10));//to ger 10's
+						
+	}
+
+}
